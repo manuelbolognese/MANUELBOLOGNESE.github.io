@@ -3,43 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <title>Manuel Bolognese | Visual Designer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Locandine eventi e visual design. AI usata con competenza, non a caso.">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f0f0f;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      font-family: 'Montserrat', sans-serif;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 120px 0;
       text-align: center;
     }
-    h1 { font-size: 3rem; margin-bottom: 10px; }
-    p { color: #bdbdbd; max-width: 600px; margin: auto; }
-    a {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 12px 28px;
-      background: #ffffff;
-      color: #0f0f0f;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+    section {
+      padding: 80px 0;
+    }
+    .bg-dark-custom {
+      background: #111;
+      color: #fff;
     }
   </style>
 </head>
+
 <body>
-  <div>
+
+<!-- HERO -->
+<header>
+  <div class="container">
     <h1>Manuel Bolognese</h1>
-    <p>
-      Visual & Graphic Designer for Events<br>
-      AI-driven design, guided by real creative criteria
-    </p>
-    <a href="https://instagram.com/TUOUSERNAME" target="_blank">
+    <p>Visual Designer • Locandine Eventi • AI con criterio</p>
+    <a href="https://www.instagram.com/TUOUSERNAME" target="_blank" class="btn btn-light btn-lg mt-4">
       Contattami su Instagram
     </a>
   </div>
+</header>
+
+<!-- ABOUT -->
+<section>
+  <div class="container text-center">
+    <h2 class="mb-4">Chi sono</h2>
+    <p class="lead">
+      Aiuto locali ed eventi a comunicare meglio con immagini moderne,
+      coerenti e pensate per i social di oggi.
+    </p>
+    <p>
+      Le AI non sono il problema: il problema è usarle senza competenze.
+      Io le uso come strumento creativo, non come scorciatoia.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="bg-light">
+  <div class="container">
+    <div class="row text-center">
+      <h2 class="mb-5">Servizi</h2>
+
+      <div class="col-md-3">
+        <h5>Locandine Eventi</h5>
+        <p>Design mirato per serate, club e locali.</p>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Visual Social</h5>
+        <p>Contenuti grafici per Instagram.</p>
+      </div>
+
+      <div class="col-md-3">
+        <h5>Restyling Grafico</h5>
+        <p>Immagine coordinata più moderna.</p>
+      </div>
+
+      <div class="col-md-3">
+        <h5>AI Assistita</h5>
+        <p>AI usata con controllo umano.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-dark-custom text-center">
+  <div class="container">
+    <h2 class="mb-4">Parliamo del tuo prossimo evento</h2>
+    <a href="https://www.instagram.com/manuelbolognese" target="_blank" class="btn btn-outline-light btn-lg">
+      Scrivimi su Instagram
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-4">
+  <small>© 2026 — Manuel Bolognese</small>
+</footer>
+
 </body>
 </html>
