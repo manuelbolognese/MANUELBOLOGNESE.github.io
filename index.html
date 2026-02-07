@@ -16,8 +16,11 @@
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
-body { font-family: 'Montserrat', sans-serif; background:#111;}
-.navbar { background:#111; }
+body { font-family: 'Montserrat', sans-serif; background:#111; }
+.navbar {
+    background: rgba(0,0,0,0.5); /* trasparente iniziale */
+    transition: background 0.3s ease;
+}
 .navbar-brand, .nav-link { color:#fff !important; }
 header { background:#111; color:#fff; padding:140px 0; text-align:center;}
 header h1 { font-size:3rem; font-weight:700;}
@@ -153,6 +156,16 @@ footer { background:#111; color:#AAA; }
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({ once: true });
+
+  // Navbar trasparente → scura quando scroll
+  window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+          navbar.style.background = 'rgba(0,0,0,0.95)';
+      } else {
+          navbar.style.background = 'rgba(0,0,0,0.5)';
+      }
+  });
 </script>
 
 </body>
