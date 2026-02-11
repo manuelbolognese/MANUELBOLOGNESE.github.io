@@ -70,6 +70,34 @@ section p {
 section .text-muted {
     color: #CFCFCF !important;
 }
+    /* ===== Alternanza sfondi elegante ===== */
+
+section:nth-of-type(even) {
+    background-color: #151515;
+}
+
+section:nth-of-type(odd) {
+    background-color: #111111;
+}
+    /* ===== Linea premium sotto i titoli ===== */
+
+section h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+section h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: #00FF99;
+    border-radius: 2px;
+}
 </style>
 </head>
 
