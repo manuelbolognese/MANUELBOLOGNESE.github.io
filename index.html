@@ -16,26 +16,31 @@
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
-/* ===== BASE STILE ===== */
 body { font-family: 'Montserrat', sans-serif; background:#111; }
 .navbar {
     background: rgba(0,0,0,0.5);
     transition: background 0.3s ease;
 }
 .navbar-brand, .nav-link { color:#fff !important; }
-section { padding:80px 0; }
+header { background:#111; color:#fff; padding:140px 0; text-align:center;}
+header h1 { font-size:3rem; font-weight:700;}
+section { padding:80px 0;}
 .portfolio img { transition: transform 0.3s ease; }
 .portfolio img:hover { transform: scale(1.05); }
 .card { background:#1A1A1A; color:#EEE; border:none; }
+
+/* Pulsanti arrotondati */
 .btn-accent { 
     background:#00FF99; 
     color:#111; 
     font-weight:600; 
     border-radius: 30px; 
     padding: 12px 30px;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s ease;
 }
-.btn-accent:hover { background:#33FFAA; color:#111; transform: scale(1.05);}
+.btn-accent:hover { background:#33FFAA; color:#111; }
+
+/* Footer elegante */
 footer {
     background: #0d0d0d;
     color: #777;
@@ -44,44 +49,50 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-/* ===== ABOUT & TESTI ===== */
-#about p { color: #F5F5F5; transition: all 0.3s ease; }
-section p, section .text-muted, section h2 { color: #F5F5F5 !important; }
-section h2 { color: #FFFFFF; letter-spacing: 1px; font-weight: 600; position: relative; padding-bottom: 15px; }
-section h2::after { content: ""; display: block; margin: 10px auto 0; width: 50px; height: 2px; background: #00FF99; border-radius: 2px; }
-section p { color: #EAEAEA; font-weight: 400; }
-section .text-muted { color: #CFCFCF !important; }
-section:nth-of-type(even) { background-color: #151515; }
-section:nth-of-type(odd) { background-color: #111111; }
+/* Testi leggibili su sfondo scuro */
+section p,
+section .text-muted,
+section h2 {
+    color: #F5F5F5 !important;
+}
 
-/* ===== HERO ===== */
-.hero-section {
+/* Titoli delle sezioni */
+section h2 {
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    font-weight: 600;
     position: relative;
-    background: url('https://picsum.photos/1600/900?blur=3') no-repeat center center/cover;
-    color: #fff;
-    padding: 160px 0;
+    padding-bottom: 15px;
 }
-.hero-section::after {
+
+/* Linea sotto i titoli */
+section h2::after {
     content: "";
-    position: absolute;
-    top:0; left:0; width:100%; height:100%;
-    background: rgba(0,0,0,0.6);
-    z-index:1;
+    display: block;
+    margin: 10px auto 0;
+    width: 50px;
+    height: 2px;
+    background: #00FF99;
+    border-radius: 2px;
 }
-.hero-section .container { position: relative; z-index:2; }
-.hero-title {
-    font-size:3rem;
-    font-weight:700;
-    text-shadow: 0 0 8px rgba(0,255,153,0.7);
+
+/* Paragrafi principali */
+section p {
+    color: #EAEAEA;
+    font-weight: 400;
 }
-.hero-subtitle { font-size:1.25rem; }
-.hero-btn {
-    box-shadow: 0 0 10px rgba(0,255,153,0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+/* Testi secondari (descrizioni tipo portfolio) */
+section .text-muted {
+    color: #CFCFCF !important;
 }
-.hero-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0,255,153,0.8);
+
+/* Alternanza sfondi elegante */
+section:nth-of-type(even) {
+    background-color: #151515;
+}
+section:nth-of-type(odd) {
+    background-color: #111111;
 }
 </style>
 </head>
@@ -107,16 +118,12 @@ section:nth-of-type(odd) { background-color: #111111; }
 </nav>
 
 <!-- HERO -->
-<header class="hero-section" data-aos="fade-up">
-  <div class="container text-center">
-    <h1 class="hero-title" data-aos="fade-down">Creo locandine che fanno venire voglia di uscire</h1>
-    <p class="lead mt-3 hero-subtitle" data-aos="fade-up" data-aos-delay="200">
-      Visual per eventi, serate e locali. AI usata con criterio, design con testa.
-    </p>
-    <p data-aos="fade-up" data-aos-delay="400">
-      Non uso l’AI per fare tutto. La uso per fare meglio.
-    </p>
-    <a href="https://www.instagram.com/manuelbolognese" target="_blank" class="btn btn-accent btn-lg mt-4 hero-btn" data-aos="zoom-in" data-aos-delay="600">
+<header data-aos="fade-up">
+  <div class="container">
+    <h1>Creo locandine che fanno venire voglia di uscire</h1>
+    <p class="lead mt-3">Visual per eventi, serate e locali. AI usata con criterio, design con testa.</p>
+    <p>Non uso l’AI per fare tutto. La uso per fare meglio.</p>
+    <a href="https://www.instagram.com/manuelbolognese" target="_blank" class="btn btn-accent btn-lg mt-4">
       Contattami su Instagram
     </a>
   </div>
@@ -134,7 +141,9 @@ section:nth-of-type(odd) { background-color: #111111; }
 <!-- SERVICES -->
 <section id="services">
   <div class="container">
-    <div class="text-center mb-5" data-aos="fade-up"><h2>Servizi</h2></div>
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2>Servizi</h2>
+    </div>
     <div class="row text-center">
       <div class="col-md-3" data-aos="fade-up">
         <div class="card p-3 mb-3">
@@ -172,9 +181,15 @@ section:nth-of-type(odd) { background-color: #111111; }
       <p class="text-muted">Concept grafici dimostrativi. I lavori reali verranno inseriti man mano.</p>
     </div>
     <div class="row portfolio">
-      <div class="col-md-4 mb-4" data-aos="zoom-in"><img src="https://picsum.photos/600/400?random=1" class="img-fluid rounded"></div>
-      <div class="col-md-4 mb-4" data-aos="zoom-in"><img src="https://picsum.photos/600/400?random=2" class="img-fluid rounded"></div>
-      <div class="col-md-4 mb-4" data-aos="zoom-in"><img src="https://picsum.photos/600/400?random=3" class="img-fluid rounded"></div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in">
+        <img src="https://picsum.photos/600/400?random=1" class="img-fluid rounded">
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in">
+        <img src="https://picsum.photos/600/400?random=2" class="img-fluid rounded">
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in">
+        <img src="https://picsum.photos/600/400?random=3" class="img-fluid rounded">
+      </div>
     </div>
   </div>
 </section>
