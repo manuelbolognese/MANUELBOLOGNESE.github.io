@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <title>Manuel Bolognese | Visual Designer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+</script>
 <meta name="description" content="Locandine eventi, visual social e design assistito da AI.">
 
 <!-- Bootstrap -->
@@ -253,10 +258,6 @@ section:nth-of-type(odd) {
 
 <script>
 AOS.init({ once: true });
-
-window.addEventListener('load', function() {
-    window.scrollTo(0, 0);
-});
 
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
