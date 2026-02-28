@@ -6,18 +6,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Locandine eventi, visual social e design assistito da AI.">
 
+<!-- Scroll manuale per evitare salti -->
 <script>
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
 </script>
 
+<!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Animate on scroll -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body { 
   font-family: 'Montserrat', sans-serif; 
@@ -57,37 +65,18 @@ section {
     transform: scale(1.05); 
 }
 
-/* CARD SERVIZI */
+/* Card servizi con micro-interazione hover MIGLIORATA */
 .card { 
     background:#1A1A1A; 
     color:#EEE; 
     border:none; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
 }
 
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(0,255,153,0.35);
-}
-
-/* Parola grande di sfondo */
-.card .bg-word {
-    position: absolute;
-    bottom: -10px;
-    right: 10px;
-    font-size: 60px;
-    font-weight: 700;
-    color: rgba(0,255,153,0.05);
-    pointer-events: none;
-    user-select: none;
-    transition: transform 0.4s ease;
-}
-
-.card:hover .bg-word {
-    transform: scale(1.1);
 }
 
 /* Movimento scritta */
@@ -99,6 +88,7 @@ section {
     transform: translateX(6px);
 }
 
+/* Pulsanti arrotondati */
 .btn-accent { 
     background:#00FF99; 
     color:#111; 
@@ -113,6 +103,7 @@ section {
     color:#111; 
 }
 
+/* Footer elegante */
 footer {
     background: #0d0d0d;
     color: #777;
@@ -121,12 +112,14 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.05);
 }
 
+/* Testi leggibili */
 section p,
 section .text-muted,
 section h2 {
     color: #F5F5F5 !important;
 }
 
+/* Titoli sezioni con linea */
 section h2 {
     letter-spacing: 1px;
     font-weight: 600;
@@ -143,13 +136,19 @@ section h2::after {
     border-radius: 2px;
 }
 
-section:nth-of-type(even) { background-color: #151515; }
-section:nth-of-type(odd) { background-color: #111111; }
+/* Alternanza sfondi */
+section:nth-of-type(even) {
+    background-color: #151515;
+}
+section:nth-of-type(odd) {
+    background-color: #111111;
+}
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">Manuel Bolognese</a>
@@ -167,6 +166,7 @@ section:nth-of-type(odd) { background-color: #111111; }
   </div>
 </nav>
 
+<!-- HERO -->
 <header data-aos="fade-up">
   <div class="container">
     <h1>Creo locandine che fanno venire voglia di uscire</h1>
@@ -183,11 +183,13 @@ section:nth-of-type(odd) { background-color: #111111; }
   </div>
 </header>
 
+<!-- CHI SONO -->
 <section id="about" class="py-5">
   <div class="container">
     <div class="text-center mb-5" data-aos="fade-up">
       <h2>Chi sono</h2>
     </div>
+
     <div class="row justify-content-center">
       <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-delay="100">
         <p class="lead">
@@ -210,6 +212,7 @@ section:nth-of-type(odd) { background-color: #111111; }
   </div>
 </section>
 
+<!-- SERVICES -->
 <section id="services">
   <div class="container">
     <div class="text-center mb-5" data-aos="fade-up">
@@ -217,11 +220,9 @@ section:nth-of-type(odd) { background-color: #111111; }
     </div>
 
     <div class="row text-center">
-
       <div class="col-md-3" data-aos="fade-up">
         <a href="locandine.html" class="text-decoration-none">
-          <div class="card p-4 mb-3">
-            <div class="bg-word">EVENTI</div>
+          <div class="card p-3 mb-3">
             <h5>Locandine Eventi</h5>
             <p>Locandine pensate per attirare persone.</p>
             <p class="mt-3 fw-semibold text-success scopri">Scopri di più →</p>
@@ -231,8 +232,7 @@ section:nth-of-type(odd) { background-color: #111111; }
 
       <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
         <a href="visual.html" class="text-decoration-none">
-          <div class="card p-4 mb-3">
-            <div class="bg-word">SOCIAL</div>
+          <div class="card p-3 mb-3">
             <h5>Visual Social</h5>
             <p>Grafiche che funzionano nel feed.</p>
             <p class="mt-3 fw-semibold text-success scopri">Scopri di più →</p>
@@ -242,8 +242,7 @@ section:nth-of-type(odd) { background-color: #111111; }
 
       <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
         <a href="restyling.html" class="text-decoration-none">
-          <div class="card p-4 mb-3">
-            <div class="bg-word">RESTYLING</div>
+          <div class="card p-3 mb-3">
             <h5>Restyling Grafico</h5>
             <p>Aggiorniamo la tua comunicazione.</p>
             <p class="mt-3 fw-semibold text-success scopri">Scopri di più →</p>
@@ -253,28 +252,39 @@ section:nth-of-type(odd) { background-color: #111111; }
 
       <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
         <a href="ai.html" class="text-decoration-none">
-          <div class="card p-4 mb-3">
-            <div class="bg-word">AI</div>
+          <div class="card p-3 mb-3">
             <h5>AI Assistita</h5>
             <p>AI guidata da competenze creative vere.</p>
             <p class="mt-3 fw-semibold text-success scopri">Scopri di più →</p>
           </div>
         </a>
       </div>
-
     </div>
   </div>
 </section>
 
+<!-- PORTFOLIO -->
 <section id="portfolio">
   <div class="container">
     <div class="text-center mb-5" data-aos="fade-up">
       <h2>Portfolio</h2>
       <p class="text-muted">Concept grafici dimostrativi.</p>
     </div>
+    <div class="row portfolio">
+      <div class="col-md-4 mb-4" data-aos="zoom-in">
+        <img src="https://picsum.photos/600/400?random=1" class="img-fluid rounded">
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in">
+        <img src="https://picsum.photos/600/400?random=2" class="img-fluid rounded">
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in">
+        <img src="https://picsum.photos/600/400?random=3" class="img-fluid rounded">
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="text-center">
   <div class="container" data-aos="fade-up">
     <h2 class="mb-4">Parliamo del tuo evento</h2>
@@ -293,6 +303,7 @@ section:nth-of-type(odd) { background-color: #111111; }
   <small>© 2026 — Manuel Bolognese | MB Studio Designer</small>
 </footer>
 
+<!-- Scripts ORIGINALI -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
